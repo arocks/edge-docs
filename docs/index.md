@@ -73,12 +73,12 @@ Please raise an issue on the [Github project page](https://github.com/arocks/edg
 
 # Table of contents
 
-* [[FAQ|FAQ (Frequently Asked Questions)]]
-* [[Tutorials|Tutorials]]
-* [[Architecture|Architecture]]
-* [[Credits|Credits]]
-* [[Proposed_Features|Proposed Features]]
-* [[Changelog|Changelog]]
+* [FAQ (Frequently Asked Questions)](FAQ.md)
+* [Tutorials](Tutorials.md)
+* [Architecture](Architecture.md)
+* [Credits](Credits.md)
+* [Proposed Features](Proposed_Features.md)
+* [Changelog](Changelog.md)
 
 ## Screens
 
