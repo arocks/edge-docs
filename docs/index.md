@@ -1,6 +1,6 @@
 # Welcome to the edge v2.0!
 
-__edge__ - a rapid, cutting-edge Django project skeleton. More screenshots below:
+[__edge__](https://github.com/arocks/edge/) - a rapid, cutting-edge Django project skeleton. More screenshots below:
 
 ![screenshot](http://i.imgur.com/hvmrudL.jpg)
 
