@@ -1,0 +1,3 @@
+- Background photo courtesy: [Death to the Stock Photo](http://deathtothestockphoto.com/)
+- Social icons: [Font Awesome icons](http://fontawesome.io/)
+- Bootswatch theme: [Yeti](http://bootswatch.com/yeti/)
