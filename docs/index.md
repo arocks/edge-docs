@@ -1,4 +1,4 @@
-# Welcome to the edge v2.0!
+# Welcome to the edge v2.1!
 
 [__edge__](https://github.com/arocks/edge/) - a rapid, cutting-edge Django project skeleton. More screenshots below:
 
@@ -7,11 +7,11 @@
 ## Features
 
 * Python 2.7 and 3.4 support - the same codebase works on the latest Python versions
-* Django 1.7 support - e.g. no south dependency
+* Django 1.8 support - e.g. no south dependency
 * Sign-ups and Log-ins - Basic user registration, log-ins, forgot password etc. using crispy forms
 * User Profiles - extendible user profile with great defaults like profile picture
 * Bootstrap bundled - Themed Bootstrap 3 based home page and admin out of the box
-* Clean start - Based on Django 1.7 project structure
+* Clean start - Based on Django 1.8 project structure
 * Secrets Secure - Picks SECRET_KEY from environment as a best practice
 * Minimal dependencies - Only essential packages listed in requirements.txt not all recommended ones
 
@@ -21,7 +21,7 @@ __Warning__: Software is currently beta and bleeding edge.
 
 * Django programmers are not designers. They need a better starting point say, with Bootstrap.
 * Writing code for signup, login and user profiles seems repetitive in every project.
-* Many project skeletons contain numerous recommended packages making them bloated.
+* Many project skeletons contain too many recommended packages making them bloated.
 * None of the project skeletons were Python 3 and Django 1.7 compatible at the time of creating the project.
 * Simpler and less annoying user authentication for rapid prototyping
 * Better layout (a subjective preference) that is intuitive to use.
@@ -36,6 +36,7 @@ More details in this [blog post](http://arunrocks.com/introducing-edge-a-modern-
 * django-braces - Essential set of mixins used for the included views
 * django-admin-bootstrapped - Added Bootstrap 3 theme to the admin
 * easy-thumbnails - (optional) for profile picture thumbnails.
+* Werkzeug (dev only) - Better Django error page
 
 ## Quick start:
 
@@ -61,9 +62,9 @@ On Windows, you might want to install the requirements file using wheels (especi
 
     $ pip install --use-wheel -r requirements.txt 
 
-On some Linux systems, Pillow will not install unless you install a C compiler:
+On some Linux systems like Ubuntu, Pillow will not install unless you install a C compiler and dependencies:
 
-    $ sudo apt-get install python3-dev python3-setuptools
+    $ sudo apt-get install python3-dev python3-setuptools libjpeg-dev zlib1g-dev
 
 Now, you are all set. Adding a new app say `polls` would be like:
 
