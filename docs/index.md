@@ -19,11 +19,11 @@ __Warning__: Software is currently beta and bleeding edge.
 
 ## Motivation
 
+* Simpler and less annoying user authentication for rapid prototyping
 * Django programmers are not designers. They need a better starting point say, with Bootstrap.
 * Writing code for signup, login and user profiles seems repetitive in every project.
 * Many project skeletons contain too many recommended packages making them bloated.
 * None of the project skeletons were Python 3 and Django 1.7 compatible at the time of creating the project.
-* Simpler and less annoying user authentication for rapid prototyping
 * Better layout (a subjective preference) that is intuitive to use.
 
 More details in this [blog post](http://arunrocks.com/introducing-edge-a-modern-django-project-template/)
