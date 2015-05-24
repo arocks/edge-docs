@@ -59,6 +59,26 @@ You can reduce the height of the jumbotron, say add this to the end of in `main.
 
 ## Deployment
 
+### How to change the database settings to use PostgreSQL, MySQL etc.?
+
+You will need to change the `DATABASE_URL` in your environment's `settings.py`. Unlike the default Django settings, you do not have to define a dictionary to set `DATABASES`. Instead, you can set a database URL in `DATABASE_URL` containing the engine, username, password, port etc.
+
+By default this is set to `sqlite:///db.sqlite3` to use a SQLite3 database. To use other databases use the following URL patterns (based on [dj-database-url](https://github.com/kennethreitz/dj-database-url)):
+
+Engine |	Django Backend | URL
+-------|-------------------|---------
+PostgreSQL |	django.db.backends.postgresql_psycopg2 |	postgres://USER:PASSWORD@HOST:PORT/NAME
+PostGIS |	django.contrib.gis.db.backends.postgis |	postgis://USER:PASSWORD@HOST:PORT/NAME
+MySQL |	django.db.backends.mysql |	mysql://USER:PASSWORD@HOST:PORT/NAME
+MySQL (GIS) |	django.contrib.gis.db.backends.mysql |	mysqlgis://USER:PASSWORD@HOST:PORT/NAME
+SQLite |	django.db.backends.sqlite3 |	sqlite:///PATH
+
+For example, a PostgreSQL database setting might be:
+
+    DATABASE_URL=postgres://admin_user:SeCRet143232@127.0.0.1:5432/database
+
+Notice that special characters can be URL encoded (say in the password) but it is better to avoid them.
+
 ### How to run this with gunicorn?
 
 In production you will want to use the `settings/production.py`. Make sure that your `wsgi.py` picks up the right settings. You can do this in either one of these three ways:
