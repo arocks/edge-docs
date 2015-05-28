@@ -59,11 +59,11 @@ You can reduce the height of the jumbotron, say add this to the end of in `main.
 
 ## Deployment
 
-### How to change the database settings to use PostgreSQL, MySQL etc.?
+### How to use other databases like PostgreSQL, MySQL etc.?
 
-You will need to change the `DATABASE_URL` in your environment's `settings.py`. Unlike the default Django settings, you do not have to define a dictionary to set `DATABASES`. Instead, you can set a database URL in `DATABASE_URL` containing the engine, username, password, port etc.
+You will need to change the `DATABASE_URL` in your environment's `settings.py`. Unlike the default Django settings, you do not have to set `DATABASES` to a large dictionary of key-value pairs. Instead, you can set a database URL in `DATABASE_URL` containing the engine, username, password, port etc.
 
-By default this is set to `sqlite:///db.sqlite3` to use a SQLite3 database. To use other databases use the following URL patterns (based on [dj-database-url](https://github.com/kennethreitz/dj-database-url)):
+By default, this is set to `sqlite:///db.sqlite3` to use a SQLite3 database. To use other databases use the following URL patterns (based on [dj-database-url](https://github.com/kennethreitz/dj-database-url)):
 
 Engine |	Django Backend | URL
 -------|-------------------|---------

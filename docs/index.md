@@ -7,26 +7,38 @@
 ## Features
 
 * Python 2.7 and 3.4 support - the same codebase works on the latest Python versions
-* Django 1.8 support - e.g. no south dependency
-* Sign-ups and Log-ins - Basic user registration, log-ins, forgot password etc. using crispy forms
+* Django 1.8 support - e.g. no south dependency, Jinja2 support
+* Sign-ups and Log-ins - Basic user registration, log-ins, forgot password etc. styled with crispy forms
 * User Profiles - extendible user profile with great defaults like profile picture
 * Bootstrap bundled - Themed Bootstrap 3 based home page and admin out of the box
 * Clean start - Based on Django 1.8 project structure
 * Secrets Secure - Picks SECRET_KEY from environment as a best practice
 * Minimal dependencies - Only essential packages listed in requirements.txt not all recommended ones
 
-__Warning__: Software is currently beta and bleeding edge.
-
 ## Motivation
 
-* Simpler and less annoying user authentication for rapid prototyping
-* Django programmers are not designers. They need a better starting point say, with Bootstrap.
-* Writing code for signup, login and user profiles seems repetitive in every project.
-* Many project skeletons contain too many recommended packages making them bloated.
-* None of the project skeletons were Python 3 and Django 1.7 compatible at the time of creating the project.
-* Better layout (a subjective preference) that is intuitive to use.
+The default project setup created by Django `startproject` command was
+great for its time. However, over time I found myself doing the same
+changes again and again while starting a new project. Clients often
+wonder what is "Django admin" and why it looks so different (or dated)
+compared to the rest of the site. Basic user sign-up and login flows
+had to be painfully created from scratch each time. Finally, the
+project layout was not modular enough for projects with different
+settings and requirements for different environments like development
+or production.
 
-More details in this [blog post](http://arunrocks.com/introducing-edge-a-modern-django-project-template/)
+Edge was designed to be much more modern starting point for your
+Django projects. It provides most features that you would expect and
+help you focus on the actual problem. At the same time, it avoids the
+bloat of numerous dependencies or complex apps.
+
+Aesthetically too, you would get an edge (forgive the pun). Bootstrap
+is used pervasively and forms are styled using `crispy-forms` to give
+the native Bootstrap feel. With a wide selection of free Bootswatch
+themes along your logo, you can create a unique visual identity in no
+time.
+
+I have written more about my motivations for building Edge in this [blog post](http://arunrocks.com/introducing-edge-a-modern-django-project-template/)
 
 ## Which packages were included and why?
 

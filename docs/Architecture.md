@@ -1,5 +1,63 @@
 Let's have a very high-level view of the components within a project created with Edge.
 
+Have a look at the project layout of an Edge project:
+
+    Top-directory
+    ├── docs
+    ├── logs
+    ├── README.md
+    ├── requirements
+    │   ├── base.txt
+    │   ├── development.txt
+    │   └── production.txt
+    ├── requirements.txt
+    └── src
+        ├── Your project name
+        │   ├── __init__.py
+        │   ├── logger.py
+        │   ├── settings
+        │   │   ├── base.py
+        │   │   ├── development.py
+        │   │   ├── local.sample.env
+        │   │   └── production.py
+        │   ├── urls.py
+        │   ├── views.py
+        │   └── wsgi.py
+        ├── accounts
+        │   ├── admin.py
+        │   ├── forms.py
+        │   ├── migrations
+        │   ├── models.py
+        │   ├── templates
+        │   ├── tests.py
+        │   ├── urls.py
+        │   └── views.py
+        ├── manage.py
+        ├── media
+        ├── profiles
+        │   ├── admin.py
+        │   ├── apps.py
+        │   ├── forms.py
+        │   ├── migrations
+        │   ├── models.py
+        │   ├── signals.py
+        │   ├── templates
+        │   ├── tests.py
+        │   ├── urls.py
+        │   └── views.py
+        ├── static
+        │   ├── bootstrap
+        │   │   ├── css
+        │   │   ├── fonts
+        │   │   └── js
+        │   └── site
+        │       ├── css
+        │       ├── ico
+        │       ├── img
+        │       └── js
+        └── templates
+
+
 An Edge project will have two apps by default:
 
 * accounts
