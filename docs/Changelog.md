@@ -1,3 +1,10 @@
+=== (2015-05-26) ===
+
+  * Updated for Django 1.8 including new TEMPLATES setting and url pattern
+  * New log directory and Werkzeug debugger
+  * Additional installation step to copy local.sample.env to local.env
+  * More details in https://github.com/arocks/edge/issues/27
+  
 === (2015-02-21) ===
 
   * User model customized to use emails as primary key
