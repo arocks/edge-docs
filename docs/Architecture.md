@@ -57,6 +57,12 @@ Have a look at the project layout of an Edge project:
         │       └── js
         └── templates
 
+Some things to note in about Edge's project layout:
+
+* __settings.py__: It will be inside `src/your project name/settings/`. It is a directory with environment specific settings like `development.py`. They will all be deriving from a common `base.py` containing most of the project settings.
+* __urls.py__: Located at `src/your project name/`, it will include `urls.py` from their respective app locations.
+* __templates__: Site-wide templates like the home page and base templates are kept here.
+* __static__: This contains your static assets including a copy of necessary Bootstrap files.
 
 An Edge project will have two apps by default:
 
