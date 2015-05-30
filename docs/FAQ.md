@@ -81,14 +81,16 @@ Notice that special characters can be URL encoded (say in the password) but it i
 
 ### How to run this with gunicorn?
 
-In production you will want to use the `settings/production.py`. Make sure that your `wsgi.py` picks up the right settings. You can do this in either one of these three ways:
+Pass the WSGI callable as a [commandline argument](http://gunicorn-docs.readthedocs.org/en/latest/run.html#django) while invoking gunicorn (change `my_proj` to your Edge project's name):
 
-1. Set the environment variable `DJANGO_SETTINGS_MODULE` to point to `my_proj.settings.production`. This can be mentioned in your virtualenv's activate script.
+    { venv_path }/bin/gunicorn my_proj.wsgi -c gunicorn.conf.py -p gunicorn.pid
 
-2. Pass a [commandline argument](http://gunicorn-docs.readthedocs.org/en/latest/settings.html#raw-env) while invoking gunicorn:
+In production you would want to use the `settings/production.py`. Hence, `wsgi.py` points to the production settings by default. It will already have a line like the following:
 
-3. Edit or copy the `wsgi.py` with the following line:
+    os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_proj.settings.production")
 
-        os.environ.setdefault("DJANGO_SETTINGS_MODULE", "my_proj.settings.production")
+In case you want to run gunicorn with a different settings file say `settings/staging.py` you will need to set the environment variable `DJANGO_SETTINGS_MODULE`, say like this:
+
+    { venv_path }/bin/gunicorn --env DJANGO_SETTINGS_MODULE=my_proj.settings.staging my_proj.wsgi -c gunicorn.conf.py -p gunicorn.pid
 
 _[Thanks to abadger1406 for this question]_
