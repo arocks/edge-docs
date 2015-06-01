@@ -1,4 +1,4 @@
-# Welcome to the edge v2.1!
+# Welcome to the edge v2.2!
 
 [__edge__](https://github.com/arocks/edge/) - a rapid, cutting-edge Django project skeleton. More screenshots below:
 
