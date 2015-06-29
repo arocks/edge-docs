@@ -12,6 +12,10 @@ However, this can be cumbersome to setup while you want to quickly start working
 
 Later you can use environment variables say in production which will override the values in your `local.env`. For security reasons, `local.env` will be ignored by git. So make sure you have noted the details in this file seperately.
 
+### Why do I get an ImproperlyConfigured exception about "SECRET_KEY setting must not be empty", after installation?
+
+You need to copy `local.env` file as mentioned in the installation steps. The previous answer explains why this is needed.
+
 ### Why do I keep getting "OSError: decoder zip not available" errors?
 
 This is a problem with Pillow library being unable to handle PNG files. Since Pillow is usually compiled while installing the dependencies in `requirements.txt`, you will need to reinstall Pillow.

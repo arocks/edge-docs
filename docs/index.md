@@ -67,6 +67,7 @@ Use the following commands but change `my_proj` (at end of first command and oth
     $ cd my_proj
     $ pip install -r requirements.txt 
     $ cd src
+    $ cp my_proj/settings/local.sample.env my_proj/settings/local.env
     $ python manage.py migrate
     $ python manage.py createsuperuser
 
