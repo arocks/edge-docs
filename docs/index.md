@@ -42,7 +42,7 @@ I have written more about my motivations for building Edge in this [blog post](h
 
 ## Which packages were included and why?
 
-* django-environ - By default, settings has environment specific information. This package helps you define such variables in the environment which is more secure.
+* django-environ - Helps you avoid keeping confidential data in settings by using environment variables.
 * django-authtools - Custom user model and class based auth views.
 * django-crispy-forms - Provides the Sign-in and Sign-up forms.
 * django-braces - Essential set of mixins used for the included views
@@ -51,6 +51,46 @@ I have written more about my motivations for building Edge in this [blog post](h
 * Werkzeug (dev only) - Better Django error page
 
 ## Quick start:
+
+### For Windows Users
+
+Skip the next set of commands if you already know how to create a virtual environment. Here is how to create a new virtual environment in Python 3.4 using the built-in `venv` library:
+
+    > python -m venv py34env
+    > cd py34env\Scripts
+    > activate.bat
+    > cd ..\..
+
+Next upgrade your pip tool and install Django:
+
+    > python -m pip install --upgrade pip
+    > pip install -U django
+
+Let's go ahead and create a new project called `my_proj`. You can name it anything you like, but make sure you carefully replace `my_proj` in the commands below.
+
+    > django-admin startproject --template=https://github.com/arocks/edge/archive/master.zip --extension=py,md,html,env my_proj
+
+Install all the required dependencies for your edge project:
+
+    > cd my_proj
+    > pip install --use-wheel -r requirements.txt
+    > cd src
+
+You can set environment variables like the `SECRET_KEY` but for convenience we will mention it in a file called `local.env` (exclude it from your version control like git). So let's copy the provide sample as a `local.env` file:
+
+    > copy my_proj\settings\local.sample.env my_proj\settings\local.env
+
+Next run migrate to create a sqllite database and create the superuser:
+
+    > python manage.py migrate
+    > python manage.py createsuperuser
+
+Finally, run the server and open the rendered site in your browser:
+
+    > python manage.py runserver
+
+
+### For Linux Users
 
 Skip the next set of commands if you already know how to create a virtual environment. Here is how to create a new virtual environment in Python 3.4 using the built-in `venv` library:
 
@@ -65,7 +105,7 @@ Use the following commands but change `my_proj` (at end of first command and oth
 
     $ django-admin.py startproject --template=https://github.com/arocks/edge/archive/master.zip --extension=py,md,html,env my_proj
     $ cd my_proj
-    $ pip install -r requirements.txt 
+    $ pip install -r requirements.txt
     $ cd src
     $ cp my_proj/settings/local.sample.env my_proj/settings/local.env
     $ python manage.py migrate
@@ -73,7 +113,7 @@ Use the following commands but change `my_proj` (at end of first command and oth
 
 On Windows, you might want to install the requirements file using wheels (especially if you don't have a C compiler) using the following command instead:
 
-    $ pip install --use-wheel -r requirements.txt 
+    $ pip install --use-wheel -r requirements.txt
 
 On some Linux systems like Ubuntu, Pillow will not install unless you install a C compiler and dependencies:
 
@@ -113,5 +153,3 @@ Please raise an issue on the [Github project page](https://github.com/arocks/edg
 [![Demo](http://share.gifyoutube.com/y4V1bw.gif)](http://youtu.be/ff_xRmG27mg)
 
 [View on YouTube](http://youtu.be/ff_xRmG27mg)
-
-
