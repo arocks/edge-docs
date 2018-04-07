@@ -6,8 +6,9 @@
 
 ## Features
 
-* Python 2.7 and 3.4 support - the same codebase works on the latest Python versions
-* Django 1.8 support - e.g. no south dependency, Jinja2 support
+* Python 3.4 (or higher) support - enjoy cool Python 3 idioms
+* Django 2.0 support - e.g. no south dependency, Jinja2 support
+* Pipenv - use the official Python packaging tool
 * Sign-ups and Log-ins - Basic user registration, log-ins, forgot password etc. styled with crispy forms
 * User Profiles - extendible user profile with great defaults like profile picture
 * Bootstrap bundled - Themed Bootstrap 3 based home page and admin out of the box
@@ -46,8 +47,8 @@ I have written more about my motivations for building Edge in this [blog post](h
 * django-authtools - Custom user model and class based auth views.
 * django-crispy-forms - Provides the Sign-in and Sign-up forms.
 * django-braces - Essential set of mixins used for the included views
-* django-admin-bootstrapped - Added Bootstrap 3 theme to the admin
 * easy-thumbnails - (optional) for profile picture thumbnails.
+* django-debug-toolbar (dev only) - Indispensable debugging tool
 * Werkzeug (dev only) - Better Django error page
 
 ## Quick start:

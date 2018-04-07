@@ -2,7 +2,9 @@
 
 ### Does Edge support Python 2.7?
 
-Yes, since Edge 2.0 we have a common codebase supporting Python 2.x and 3.x
+No, since the latest version of Django now supports only Python 3 and edge is always designed to the latest Django version, Python 3 support is removed.
+
+Versions earlier than 2.1 used to support both Python 2 and 3. You can use that if you are stuck with Python 2.
 
 ### What is `local.env` file and why should I copy it?
 
@@ -42,7 +44,7 @@ The accounts app contains most of the sign up and sign in functionality. The vie
 1. Brand Name: Edit `src/templates/_brandname.html`. Or use a one-liner:
 
         echo "Fantasy Quidditch" > src/templates/_brandname.html
- 
+
 2. Logo: Change `src/static/site/img/logo.png`. Or use a one-liner:
 
         curl -o src/static/site/img/logo.png http://icons.iconarchive.com/icons/iconka/harry-potter/32/broom-icon.png
