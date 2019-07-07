@@ -2,7 +2,7 @@
 
 ### Does Edge support Python 2.7?
 
-No, since the latest version of Django now supports only Python 3 and edge is always designed to the latest Django version, Python 3 support is removed.
+No, since the latest version of Django now supports only Python 3 and edge is always designed to the latest Django version, Python 2 support is removed.
 
 Versions earlier than 2.1 used to support both Python 2 and 3. You can use that if you are stuck with Python 2.
 
